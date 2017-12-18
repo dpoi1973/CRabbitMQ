@@ -1,0 +1,166 @@
+{
+  "Common": {
+    "mqServer": "amqp://192.168.0.251",
+    "Jobs":[
+    {
+      "jobName" :"FormheadCJob",  
+      "ErrorQueueName":"C#ediformheadErr",
+      "BackQueueName":"C#statusformhead",
+      "path":"./jobslib/ediLibs",
+      "className": "FormHeadCJobProcess",
+      "queueConfig":{
+        "queueName": "C#ediformhead",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+      
+    },
+    {
+      "jobName" :"CustomResultCJob",
+      "ErrorQueueName":"C#edicustomsResultsErr",
+      "BackQueueName":"C#statuscustoms",
+      "path":"./jobslib/ediLibs",
+      "className": "CustomsCJobProcess",
+      "queueConfig":{
+        "queueName": "C#edicustomsResults",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+     
+    },
+    {
+      "jobName" :"SJHeadCJob",  
+      "ErrorQueueName":"C#shangjianHeadsErr",
+      "path":"./jobslib/sjLibs",
+      "className": "SJHeadCJobProcess",
+      "queueConfig":{
+        "queueName": "C#shangjianHeads",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+      
+    },
+    {
+      "jobName" :"SJResultCJob",
+      "ErrorQueueName":"C#shangjianResultsErr",
+      "path":"./jobslib/sjLibs",
+      "className": "SJResultsCJobProcess",
+      "queueConfig":{
+        "queueName": "C#shangjianResults",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+     
+    },
+    {
+      "jobName" :"EDITimeCJob",
+      "ErrorQueueName":"updateEDIQueueErr",
+      "path":"./jobslib/ediLibs",
+      "className": "EDITimeCJobProcess",
+      "queueConfig":{
+        "queueName": "updateEDIQueue",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+     
+    },
+    // {
+    //   "jobName" :"EDICUSTOMSCERRlogJob",
+    //   "ErrorQueueName":"C#edicustomsResultsErr",
+    //   "BackQueueName":"C#statuscustoms",
+    //   "path":"./jobslib/ediLibs",
+    //   "className": "CUSTOMSCERRJobProcess",
+    //   "queueConfig":{
+    //     "queueName": "C#edicustomsResultsErr",
+    //     "exclusive": false,
+    //     "queuePrefechNum":1
+    //   },
+    //   "dbstr":"192.168.0.70:3001"
+     
+    // },
+    // {
+    //   "jobName" :"FORMHEADERRClogJob",
+    //   "ErrorQueueName":"C#ediformheadErr",
+    //   "BackQueueName":"C#statusformhead",
+    //   "path":"./jobslib/ediLibs",
+    //   "className": "FORMHEADERRJobProcess",
+    //   "queueConfig":{
+    //     "queueName": "C#ediformheadErr",
+    //     "exclusive": false,
+    //     "queuePrefechNum":1
+    //   },
+    //   "dbstr":"192.168.0.70:3001"
+     
+    // },
+     {
+      "jobName" :"StatusFormheadCJob",  
+      "ErrorQueueName":"C#statusformheadErr",
+      "path":"./jobslib/ediLibs",
+      "className": "StatusFormHeadCJobProcess",
+      "queueConfig":{
+        "queueName": "C#statusformhead",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+      
+    },
+    // {
+    //   "jobName" :"STATUSFORMHEADCJob",  
+    //   "ErrorQueueName":"C#statusformheadErr",
+    //   "path":"./jobslib/ediLibs",
+    //   "className": "STATUSFORMHEADCERRJobProcess",
+    //   "queueConfig":{
+    //     "queueName": "C#statusformheadErr",
+    //     "exclusive": false,
+    //     "queuePrefechNum":1
+    //   },
+    //   "dbstr":"192.168.0.70:3001"
+    // },
+     {
+      "jobName" :"StatusCustomResultCJob",
+      "ErrorQueueName":"C#statuscustomsErr",
+      "path":"./jobslib/ediLibs",
+      "className": "StatusCustomsCJobProcess",
+      "queueConfig":{
+        "queueName": "C#statuscustoms",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+     
+    },
+    {
+      "jobName" :"DecResultCJob",
+      "ErrorQueueName":"C#decResultErr",
+      "path":"./jobslib/ediLibs",
+      "className": "DecResultCJobProcess",
+      "queueConfig":{
+        "queueName": "C#decResult",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:3001"
+     
+    },
+    {
+      "jobName" :"EdiUpdateCJob",
+      "ErrorQueueName":"C#ediupdateErr",
+      "path":"./jobslib/ediLibs",
+      "className": "EdiUpdateCJobProcess",
+      "queueConfig":{
+        "queueName": "C#ediupdate",
+        "exclusive": false,
+        "queuePrefechNum":1
+      },
+      "dbstr":"192.168.0.70:8008"
+     
+    }
+    ]
+  }
+}
